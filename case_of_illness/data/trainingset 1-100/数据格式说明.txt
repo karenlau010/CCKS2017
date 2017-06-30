@@ -1,0 +1,15 @@
+数据格式说明：
+	每个病例分为4个域，分别存储在4个文件夹
+		一般项目
+		病史特征
+		诊疗过程
+		出院情况
+	每一个目录下存储两类文件
+		***orginal.txt
+			原始纯文本文件（也就是NER的输入文件）
+		***.txt
+			对应同名原始文件的标注结果，分四个域
+				entity mention: 识别出的实体名称
+				pos_b: entity mention在文件中的起始位置（从0开始编号）
+				pos_e: entity mention在文件中的终止位置
+				category：entity所属的类别

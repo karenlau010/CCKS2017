@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+for i in $(seq 91 100)
+do
+    #echo $i
+    crf_test -m check_model 病史特点.test-$i.txt > result_check-$i.txt
+    crf_test -m body_model 病史特点.test-$i.txt > result_body-$i.txt
+    crf_test -m disease_model 病史特点.test-$i.txt > result_disease-$i.txt
+    crf_test -m signs_model 病史特点.test-$i.txt > result_signs-$i.txt
+    crf_test -m treatment_model 病史特点.test-$i.txt > result_treatment-$i.txt    
+done
